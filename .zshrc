@@ -11,6 +11,9 @@ fi
 # color in grep
 alias grep='grep --color=auto'
 
+#alias for dotfiles
+alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
 # alias for fzf
 alias fzf='fzf --preview "bat --color=always --style=header,grid --line-range :500 {}"'
 
