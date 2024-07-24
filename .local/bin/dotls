@@ -2,5 +2,11 @@
 
 FILE=`git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME ls-files|fzf`
 
-cd `dirname $FILE`
-nvim
+if [[ -d $FILE ]]; then
+    cd $FILE
+    nvim .
+elif [[ -f $FILE ]]; then
+    cd `dirname $FILE`
+    nvim `basename $FILE`
+fi
+
