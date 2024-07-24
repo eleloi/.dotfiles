@@ -14,10 +14,6 @@ alias grep='grep --color=auto'
 # dotfiles stuff
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
-dotls() {
-  nvim -o `git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME ls-files|fzf`
-}
-
 # alias for fzf
 alias fzf='fzf --preview "bat --color=always --style=header,grid --line-range :500 {}"'
 

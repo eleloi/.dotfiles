@@ -1,0 +1,6 @@
+#!/bin/sh
+
+FILE=`git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME ls-files|fzf`
+
+cd `dirname $FILE`
+nvim
