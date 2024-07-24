@@ -47,7 +47,7 @@ plugins=(
 )
 
 # zstyle ':autocomplete:*' default-context history-incremental-search-backward
-
+export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 source $ZSH/oh-my-zsh.sh
 [ -f $HOME/.fzf.zsh ] && source ~/.fzf.zsh
 
