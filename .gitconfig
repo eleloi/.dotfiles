@@ -1,0 +1,11 @@
+[user]
+        name = Eloi Vallverdú
+        email = eleloi@gmail.com
+[alias]
+        s = status -sb
+        lg = log --oneline --graph --abbrev-commit --decorate --all -25
+        last = log -1 HEAD --stat
+[init]
+	defaultBranch = main
+[core]
+	editor = nvim
