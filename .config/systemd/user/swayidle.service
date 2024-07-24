@@ -1,0 +1,8 @@
+[Unit]
+PartOf=graphical-session.target
+After=graphical-session.target
+Requisite=graphical-session.target
+
+[Service]
+ExecStart=/usr/bin/swayidle -w timeout 5 'if pgrep -x swaylock; then niri msg action power-off-monitors; fi' resume ''
+Restart=on-failure
