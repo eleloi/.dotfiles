@@ -1,5 +1,6 @@
 #!/bin/bash
 
+cd $HOME
 FILE=`git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME ls-files|fzf`
 
 if [[ -d $FILE ]]; then
