@@ -11,6 +11,14 @@ fi
 # color in grep
 alias grep='grep --color=auto'
 
+# pkill
+function pkill() {
+    ps aux | \
+        fzf --height 40% --layout=reverse --prompt="Select process to kill:" --preview="" | \
+        awk '{print $2}' | \
+        xargs -r sudo kill
+}
+
 # dotfiles stuff
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
