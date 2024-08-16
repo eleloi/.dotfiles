@@ -1,10 +1,11 @@
 [user]
-        name = Eloi Vallverdú
-        email = eleloi@gmail.com
+    name = Eloi Vallverdú
+    email = eleloi@gmail.com
+	sgningkey = A8A8882C5990AEB6
 [alias]
-        s = status -sb
-        lg = log --oneline --graph --abbrev-commit --decorate --all -25
-        last = log -1 HEAD --stat
+    s = status -sb
+    lg = log --oneline --graph --abbrev-commit --decorate --all -25
+    last = log -1 HEAD --stat
 [init]
 	defaultBranch = main
 [core]
