@@ -145,3 +145,11 @@ bindkey -M vicmd v edit-command-line
 # colorize man pages
 export GROFF_NO_SGR=1
 
+# Vipe (Vim pipe editor)
+function vipe() {
+   local file=$(mktemp)
+   nvim -c "w! $file" - > /dev/tty
+   cat $file
+   rm $file
+}
+
