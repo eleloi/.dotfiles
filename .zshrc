@@ -106,10 +106,14 @@ esac
 # pnpm end
 
 # lsd
-alias ls='lsd'
-alias l='ls'
-alias la='lsd -a'
-alias ll='lsd -a -l'
+alias l='lsd'
+alias la='l --almost-all'
+
+alias ls='lsd --blocks=size,date,name --date=relative'
+alias lsa='ls --almost-all'
+
+alias ll='lsd --long'
+alias lla='ll --almost-all'
 
 # remote poetry
 alias remotepoetry='PYTHON_KEYRING_BACKEND=keyring.backends.null.Keyring poetry'
