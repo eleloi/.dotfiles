@@ -1,0 +1,14 @@
+[[snippets]]
+description = "gpg: View gpg key descriptions"
+command = "pass gpg/key-descriptions|bat --color=always --language=markdown"
+output = ""
+
+[[snippets]]
+description = "gpg: list secret keys"
+command = "gpg --list-secret-keys --keyid-format LONG"
+output = ""
+
+[[snippets]]
+description = "gpg: make secret keys backup into pass manager"
+command = "gpg --export-secret-keys --armor | gpg --symmetric --armor --passphrase \"<password>\" --batch|pass insert --multiline  gpg/secret-keys-backup "
+output = ""
