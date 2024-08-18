@@ -43,6 +43,6 @@ eval "$(starship init zsh)"
 autoload -U colors && colors
 setopt promptsubst
 
-PS1=$'%F{226}${(r:$COLUMNS::\u2500:)}%f\n'$PS1
+PS1=$'%F{133}${(r:$COLUMNS::\u2500:)}%f\n'$PS1
 
 
