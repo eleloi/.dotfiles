@@ -1,5 +1,6 @@
 export EDITOR=nvim
 export TERM=xterm-256color
+export GPG_TTY=$(tty)
 
 if [[ -o login ]]; then
   neofetch
