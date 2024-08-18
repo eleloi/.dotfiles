@@ -2,22 +2,30 @@
     name = Eloi Vallverdú
     email = eleloi@gmail.com
 	sgningkey = A8A8882C5990AEB6
+
 [alias]
     s = status -sb
     lg = log --oneline --graph --abbrev-commit --decorate --all -25
     last = log -1 HEAD --stat
+
 [init]
 	defaultBranch = main
+
 [core]
-	editor = nvim
     pager = delta
+	editor = nvim
+
 [interactive]
     diffFilter = delta --color-only
+
 [delta]
     navigate = true
+
 [merge]
     conflictstyle = diff3
+
 [diff]
     colorMoved = default
+
 [commit]
 	gpgsign = true
