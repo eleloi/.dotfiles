@@ -39,6 +39,32 @@ function yy() {
 	rm -f -- "$tmp"
 }
 
+# git fetch
+gitf() {
+    git fetch --all --prune
+
+    if command -v onefetch > /dev/null; then
+        onefetch
+    else
+        echo "onefetch is not installed"
+    fi
+
+    echo "    ${CYAN}-------------------GIT LOG--------------------${NC}"
+    git lg -10
+
+    echo
+    echo "    ${CYAN}-----------------GIT STATUS-------------------${NC}"
+    git s
+
+    local stash_list
+    stash_list=$(git stash list)
+    if [ -n "$stash_list" ]; then
+        echo
+        echo "    ${CYAN}-----------------GIT STASH-------------------${NC}"
+        echo "$stash_list"
+    fi
+}
+
 # project
 p() {
     local CYAN='\033[0;36m'
@@ -80,28 +106,7 @@ p() {
     if [ -n "$selected_dir" ]; then
         cd "$selected_dir" || { echo "Failed to change directory to $selected_dir"; return 1; }
         echo "Changed directory to $selected_dir"
-        git fetch
-
-        if command -v onefetch > /dev/null; then
-            onefetch
-        else
-            echo "onefetch is not installed"
-        fi
-
-        echo "    ${CYAN}-------------------GIT LOG--------------------${NC}"
-        git lg -10
-
-        echo
-        echo "    ${CYAN}-----------------GIT STATUS-------------------${NC}"
-        git s
-
-        local stash_list
-        stash_list=$(git stash list)
-        if [ -n "$stash_list" ]; then
-            echo
-            echo "    ${CYAN}-----------------GIT STASH-------------------${NC}"
-            echo "$stash_list"
-        fi
+        gitf
     else
         echo "No directory selected"
     fi

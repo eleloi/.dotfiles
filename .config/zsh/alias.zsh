@@ -9,7 +9,6 @@ alias fzf='fzf --preview "bat --color=always --style=header,grid --line-range :5
 
 # no pager in git
 alias git='git --no-pager'
-alias gitf='git fetch --all --prune && git lg'
 
 # ssh, allows kitty to work with ssh
 alias ssh='env TERM=xterm-256color ssh' 
