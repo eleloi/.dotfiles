@@ -17,3 +17,8 @@
   description = "jq example filter certain key value items, case insensitive"
   command = "pass show bitwarden-backup.json | jq '.items|..| if(.name? and (.name | ascii_downcase | contains(\"santander\"))) then . else empty end'"
   output = ""
+
+[[snippets]]
+  description = "yay: list instaled packages details with fzf"
+  command = "yay -Qq | fzf --preview 'yay -Qil {}' --layout=reverse --bind 'enter:execute(yay -Qil {} | less)'"
+  output = ""
