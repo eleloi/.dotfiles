@@ -1,5 +1,7 @@
 # zoxide
-eval "$(zoxide init zsh)"
+if command -v zoxide &> /dev/null; then
+  eval "$(zoxide init --cmd cd zsh)"
+fi
 
 # Local bin path
 export PATH="$PATH:$HOME/.local/bin"
