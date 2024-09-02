@@ -22,3 +22,8 @@
   description = "yay: list instaled packages details with fzf"
   command = "yay -Qq | fzf --preview 'yay -Qil {}' --layout=reverse --bind 'enter:execute(yay -Qil {} | less)'"
   output = ""
+
+[[snippets]]
+  description = "bash register .env file variables into shell"
+  command = "export $(grep -v '^#' .env | xargs -d '\\n')"
+  output = ""
