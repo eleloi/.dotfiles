@@ -1,0 +1,9 @@
+[Unit]
+Description=Run on boot and 1/2 hour
+
+[Timer]
+OnCalendar=*:0/30
+RandomizedDelaySec=10m
+
+[Install]
+WantedBy=timers.target

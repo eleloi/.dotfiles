@@ -1,0 +1,9 @@
+[Unit]
+Description=Do a dotfiles git pull
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/eleloi
+RemainAfterExit=yes
+ExecStart=git --git-dir=/home/eleloi/.dotfiles/ --work-tree=/home/eleloi pull
+

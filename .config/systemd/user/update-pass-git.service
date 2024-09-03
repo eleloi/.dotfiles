@@ -1,0 +1,8 @@
+[Unit]
+Description=Do a pass git pull
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=pass git pull
+
