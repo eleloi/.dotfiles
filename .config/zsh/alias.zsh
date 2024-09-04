@@ -3,6 +3,7 @@ alias grep='grep --color=auto'
 
 # dotfiles stuff
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias lazydot='lazygit --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # alias for fzf
 alias fzf='fzf --preview "bat --color=always --style=header,grid --line-range :500 {}"'
