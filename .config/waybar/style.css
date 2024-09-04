@@ -1,9 +1,6 @@
-@define-color bg_primary rgba(255, 255, 255, 0.7);
-@define-color fg_primary #333;
+@import "mocha.css";
 
 * {
-  border: none;
-  border-radius: 0;
   /* `otf-font-awesome` is required to be installed for icons */
   /* font-family: Roboto, Helvetica, Arial, sans-serif; */
   font-family: "Roboto Condensed", "Font Awesome 5 Free";
@@ -12,77 +9,51 @@
   font-weight: bold;
 }
 
+#waybar {
+  color: @text;
+  border: none;
+  border-radius: 0;
+}
+
 window#waybar {
-  background-color: rgba(255, 255, 255, 0);
-  border-bottom: 3px solid rgba(0, 0, 0, 0);
-  color: @fg_primary;
-  transition-property: background-color;
-  transition-duration: 0.5s;
+  background-color: shade(@base, 0.9);
+  border: 2px solid alpha(@crust, 0.3);
 }
 
 window#waybar.hidden {
   opacity: 0.2;
 }
 
-/*
-window#waybar.empty {
-    background-color: transparent;
-}
-window#waybar.solo {
-    background-color: #FFFFFF;
-}
-*/
-
-#window {
-  color: #eee;
-  text-shadow: 0px 0px 2px #000;
-}
-
 .modules-center {
   padding: 10px 0px;
-  background-color: @bg_primary;
-}
-
-#workspaces button.focused {
-  border-bottom: 3px solid #444;
 }
 
 .modules-left > * {
-  background-color: @bg_primary;
   padding: 10px 0px;
-}
-
-.modules-left > widget:last-child {
 }
 
 .modules-right > * {
-  background-color: @bg_primary;
   padding: 10px 0px;
 }
 
-.modules-right > widget:nth-child(2) {
-}
-
 #workspaces button {
+  border-radius: 1rem;
   padding: 3px 0px 3px 0px;
   margin: 0px 2px 0px 2px;
-  background-color: transparent;
-  color: black;
-}
-
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
-#workspaces button:hover {
-  background: #bbb;
-  box-shadow: inherit;
-  border-bottom: 3px solid #bbb;
 }
 
 #workspaces button.active {
-  background-color: #005fef;
+  color: @crust;
+  background-color: @sky;
+}
+
+#workspaces button:hover {
+  background: @pink;
+  box-shadow: inherit;
 }
 
 #workspaces button.urgent {
-  background-color: #eb4d4b;
+  background-color: @red;
 }
 
 #mode {
@@ -112,7 +83,9 @@ window#waybar.solo {
 }
 
 #clock {
-  /* background-color: #64727D; */
+  background-color: @pink;
+  color: @crust;
+  border-radius: 0.2rem;
   padding: 10px 0px;
 }
 
