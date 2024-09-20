@@ -1,29 +1,49 @@
-[[snippets]]
-  description = "gpg: View gpg key descriptions"
+
+[[Snippets]]
+  Description = "gpg: View gpg key descriptions"
+  Filename = "/home/eleloi/.config/pet/snippet.toml"
+  Output = ""
+  Tag = []
   command = "pass gpg/key-descriptions|bat --color=always --language=markdown"
-  output = ""
 
-[[snippets]]
-  description = "gpg: list secret keys"
+[[Snippets]]
+  Description = "gpg: list secret keys"
+  Filename = "/home/eleloi/.config/pet/snippet.toml"
+  Output = ""
+  Tag = []
   command = "gpg --list-secret-keys --keyid-format LONG"
-  output = ""
 
-[[snippets]]
-  description = "gpg: make secret keys backup into pass manager"
+[[Snippets]]
+  Description = "gpg: make secret keys backup into pass manager"
+  Filename = "/home/eleloi/.config/pet/snippet.toml"
+  Output = ""
+  Tag = []
   command = "gpg --export-secret-keys --armor | gpg --symmetric --armor --passphrase \"<password>\" --batch|pass insert --multiline  gpg/secret-keys-backup "
-  output = ""
 
-[[snippets]]
-  description = "jq example filter certain key value items, case insensitive"
+[[Snippets]]
+  Description = "jq example filter certain key value items, case insensitive"
+  Filename = "/home/eleloi/.config/pet/snippet.toml"
+  Output = ""
+  Tag = []
   command = "pass show bitwarden-backup.json | jq '.items|..| if(.name? and (.name | ascii_downcase | contains(\"santander\"))) then . else empty end'"
-  output = ""
 
-[[snippets]]
-  description = "yay: list instaled packages details with fzf"
+[[Snippets]]
+  Description = "yay: list instaled packages details with fzf"
+  Filename = "/home/eleloi/.config/pet/snippet.toml"
+  Output = ""
+  Tag = []
   command = "yay -Qq | fzf --preview 'yay -Qil {}' --layout=reverse --bind 'enter:execute(yay -Qil {} | less)'"
-  output = ""
 
-[[snippets]]
-  description = "bash register .env file variables into shell"
+[[Snippets]]
+  Description = "bash register .env file variables into shell"
+  Filename = "/home/eleloi/.config/pet/snippet.toml"
+  Output = ""
+  Tag = []
   command = "export $(grep -v '^#' .env | xargs -d '\\n')"
-  output = ""
+
+[[Snippets]]
+  Description = "Generate password as passphrase"
+  Filename = "/home/eleloi/.config/pet/snippet.toml"
+  Output = ""
+  Tag = []
+  command = "xkcdpass -n 3 -d - -C capitalize"
