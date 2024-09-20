@@ -2,6 +2,15 @@ export EDITOR=nvim
 export TERM=xterm-256color
 export GPG_TTY=$(tty)
 
+export LC_TIME="es_ES.UTF-8"
+export LC_MONETARY="es_ES.UTF-8"
+export LC_PAPER="es_ES.UTF-8"
+export LC_MEASUREMENT="es_ES.UTF-8"
+export LC_NAME="es_ES.UTF-8"
+export LC_ADDRESS="es_ES.UTF-8"
+export LC_TELEPHONE="es_ES.UTF-8"
+export LC_IDENTIFICATION="es_ES.UTF-8"
+
 if [[ -o login ]]; then
   neofetch
 fi
