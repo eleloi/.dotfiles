@@ -1,9 +1,9 @@
 [Unit]
-Description=Do a dotfiles git pull
+Description=Do a dotfiles git sync
 
 [Service]
 Type=oneshot
 WorkingDirectory=/home/eleloi
-RemainAfterExit=yes
-ExecStart=git --git-dir=/home/eleloi/.dotfiles/ --work-tree=/home/eleloi pull
+ExecStart=git --git-dir=/home/eleloi/.dotfiles/ --work-tree=/home/eleloi pull --rebase=true
+ExecStart=git --git-dir=/home/eleloi/.dotfiles/ --work-tree=/home/eleloi push
 

@@ -1,9 +1,9 @@
 [Unit]
-Description=Run on boot and 1/2 hour
+Description=Run on boot and each 30 minutes
 
 [Timer]
-OnCalendar=*:0/30
-RandomizedDelaySec=10m
+OnBootSec=1min
+OnUnitActiveSec=30min
 
 [Install]
 WantedBy=timers.target

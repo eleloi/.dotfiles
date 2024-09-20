@@ -1,8 +1,8 @@
 [Unit]
-Description=Do a pass git pull
+Description=Do a pass git sync
 
 [Service]
 Type=oneshot
-RemainAfterExit=yes
-ExecStart=pass git pull
+ExecStart=pass git pull --rebase=true
+ExecStart=pass git push
 
