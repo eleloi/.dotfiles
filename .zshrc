@@ -11,17 +11,7 @@ export LC_ADDRESS="es_ES.UTF-8"
 export LC_TELEPHONE="es_ES.UTF-8"
 export LC_IDENTIFICATION="es_ES.UTF-8"
 
-
-if [[ -o login ]]
-then
-    if command -v fastfetch &> /dev/null
-    then
-        fastfetch
-    elif command -v neofetch &> /dev/null
-    then
-        neofetch
-    fi
-fi
+$HOME/.local/bin/neofetch_custom_logo.sh
 
 autoload -U +X bashcompinit && bashcompinit
 
