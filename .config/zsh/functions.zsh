@@ -112,3 +112,11 @@ p() {
     fi
 }
 
+# tmux new
+tmnew() {
+    local session_name="$1"
+    if [ -z "$session_name" ]; then
+        session_name="default"
+    fi
+    tmux new -s "$session_name"
+}
