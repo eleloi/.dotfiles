@@ -116,7 +116,8 @@ p() {
 tmnew() {
     local session_name="$1"
     if [ -z "$session_name" ]; then
-        session_name="default"
+        echo "Enter session name"
+        read -r session_name
     fi
     tmux new -s "$session_name"
 }
