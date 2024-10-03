@@ -15,6 +15,9 @@ $HOME/.local/bin/neofetch_custom_logo.sh
 
 autoload -U +X bashcompinit && bashcompinit
 
+# vi mode
+bindkey -v
+
 # edit command line in nvim
 autoload -U edit-command-line
 zle -N edit-command-line
