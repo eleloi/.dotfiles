@@ -113,10 +113,15 @@ p() {
 }
 
 # tmux new
-tmnew() {
+tmn() {
     local session_name="$1"
+    
     if [ -z "$session_name" ]; then
-        session_name="default"
+        echo -n "Session name? (default: default)  > " 
+        read session_name
+        session_name=${session_name:-default}
     fi
+    
     tmux new -s "$session_name"
 }
+
