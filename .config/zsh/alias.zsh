@@ -8,9 +8,6 @@ alias lazydot='lazygit --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 # alias for fzf
 alias fzf='fzf --preview "bat --color=always --style=header,grid --line-range :500 {}"'
 
-# no pager in git
-alias git='git --no-pager'
-
 # ssh, allows kitty to work with ssh
 alias ssh='env TERM=xterm-256color ssh' 
 
