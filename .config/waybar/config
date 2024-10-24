@@ -75,12 +75,12 @@
         "rotate": 270,
     },
     "cpu": {
-        "format": " {usage}%",
+        "format": "  {usage}%",
         "tooltip": false,
         "rotate": 270,
     },
     "memory": {
-        "format": " {}%",
+        "format": "  {}%",
         "rotate": 270,
     },
     "temperature": {
