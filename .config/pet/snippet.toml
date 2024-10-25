@@ -47,3 +47,10 @@
   Output = ""
   Tag = []
   command = "xkcdpass -n 3 -d - -C capitalize"
+
+[[Snippets]]
+  Description = "Docker remove all test stuff"
+  Filename = "/home/eleloi/.config/pet/snippet.toml"
+  Output = ""
+  Tag = []
+  command = "docker ps --filter 'name=.test' --format {{.Names}}|xargs -t -I % sh -c 'docker stop % && docker rm %'"
