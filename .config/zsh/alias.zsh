@@ -35,3 +35,5 @@ if [[ -f $HOME/.tmuxifier/bin/tmuxifier ]]; then
     alias tls="tmuxifier load-session \`tmuxifier ls|fzf\`"
 fi
 
+# mcli
+alias mc="mcli"
