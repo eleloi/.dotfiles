@@ -17,6 +17,7 @@ plugins=(
     sudo
     zsh-syntax-highlighting
     zsh-nvm
+    zsh-vi-mode
 )
 
 # docker enable stacking autocompletion
@@ -45,4 +46,4 @@ setopt promptsubst
 
 PS1=$'%F{133}${(r:$COLUMNS::\u2500:)}%f\n'$PS1
 
-
+ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
