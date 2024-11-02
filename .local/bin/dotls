@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cd $HOME
-FILE=`git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME ls-files|fzf`
+FILE=`git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME ls-files|fzf --preview 'bat --color always {}'`
 
 if [[ -d $FILE ]]; then
     cd $FILE
