@@ -1,6 +1,3 @@
-
-set EDITOR "nvim"
-
 # color in grep
 alias grep='grep --color=auto'
 
@@ -28,5 +25,14 @@ alias ll='lsd --long'
 alias lla='ll --almost-all'
 
 # remote poetry
-alias remotepoetry='PYTHON_KEYRING_BACKEND=keyring.backends.null.Keyring poetry'
+abbr remotepoetry 'PYTHON_KEYRING_BACKEND=keyring.backends.null.Keyring poetry'
 
+# git abbreviations
+abbr ga 'git add'
+abbr gf 'git fetch'
+abbr gp 'git push'
+abbr gP 'git pull'
+abbr gd 'git diff'
+abbr gs 'git s'
+abbr gl 'git lg'
+abbr gc 'git commit'

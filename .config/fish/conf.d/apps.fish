@@ -22,3 +22,6 @@ set GROFF_NO_SGR 1
 
 # huggingface
 set HF_HUB_ENABLE_HF_TRANSFER 1
+
+# fish fzf
+set fzf_diff_highlighter delta
