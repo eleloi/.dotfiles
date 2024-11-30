@@ -1,7 +1,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-source $HOME/.zsh/catppuccin_macchiato-zsh-syntax-highlighting.zsh
+source $HOME/.config/zsh/catppuccin_macchiato-zsh-syntax-highlighting.zsh
 
 plugins=(
     fzf
@@ -13,10 +13,8 @@ plugins=(
     pip
     zsh-autosuggestions
     zsh-fzf-history-search
-    zsh-z
     sudo
     zsh-syntax-highlighting
-    zsh-nvm
 )
 
 # docker enable stacking autocompletion
