@@ -54,3 +54,10 @@
   Output = ""
   Tag = []
   command = "docker ps --filter 'name=.test' --format {{.Names}}|xargs -t -I % sh -c 'docker stop % && docker rm %'"
+
+[[Snippets]]
+  Description = "yay: find package containing specific filename"
+  Filename = "/home/eleloi/.config/pet/snippet.toml"
+  Output = ""
+  Tag = []
+  command = "yay -Fy <filename>"
