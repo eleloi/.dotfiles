@@ -60,4 +60,4 @@
   Filename = "/home/eleloi/.config/pet/snippet.toml"
   Output = ""
   Tag = []
-  command = "yay -Fy <filename>"
+  command = "yay -F <filename>"
