@@ -61,3 +61,10 @@
   Output = ""
   Tag = []
   command = "yay -F <filename>"
+
+[[Snippets]]
+  Description = "Which process is using which port"
+  Filename = "/home/eleloi/.config/pet/snippet.toml"
+  Output = ""
+  Tag = []
+  command = "sudo ss -lptn|grep <port>"
