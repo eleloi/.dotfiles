@@ -68,3 +68,10 @@
   Output = ""
   Tag = []
   command = "sudo ss -lptn|grep <port>"
+
+[[Snippets]]
+  Description = "corts socks5 proxy"
+  Filename = "/home/eleloi/.config/pet/snippet.toml"
+  Output = ""
+  Tag = []
+  command = "ssh -C -q -D 8080 -t corts.cgicapps.com 'watch -n 30 cowsay proxy'"
