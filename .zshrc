@@ -27,3 +27,7 @@ source ~/.config/zsh/oh-my-zsh.zsh
 source ~/.config/zsh/apps.zsh
 source ~/.config/zsh/functions.zsh
 source ~/.config/zsh/alias.zsh
+
+if [[ -f ~/.zshrc_custom ]]; then
+    source ~/.zshrc_custom
+fi
