@@ -1,7 +1,7 @@
 [user]
     name = Eloi Vallverdú
     email = eleloi@gmail.com
-	sgningkey = A8A8882C5990AEB6
+	signingkey = A8A8882C5990AEB6
 
 [alias]
     s = status -sb
