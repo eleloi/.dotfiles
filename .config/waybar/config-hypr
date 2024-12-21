@@ -117,7 +117,7 @@
     },
     "network": {
         "format-wifi": "{signalStrength}% ",
-        "format-ethernet": "",
+        "format-ethernet": "🖧",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
