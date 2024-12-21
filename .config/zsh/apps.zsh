@@ -48,3 +48,8 @@ export GROFF_NO_SGR=1
 
 # mcli
 complete -o nospace -C /usr/bin/mcli mcli
+
+# direnv
+if command -v direnv &> /dev/null; then
+    eval "$(direnv hook zsh)"
+fi
