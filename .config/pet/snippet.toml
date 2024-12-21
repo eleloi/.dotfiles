@@ -75,3 +75,10 @@
   Output = ""
   Tag = []
   command = "ssh -C -q -D 8080 -t corts.cgicapps.com 'watch -n 30 cowsay proxy'"
+
+[[Snippets]]
+  Description = "yay remove orphans"
+  Filename = "/home/eleloi/.config/pet/snippet.toml"
+  Output = ""
+  Tag = []
+  command = "yay -Qtdq | yay -Rns -"
