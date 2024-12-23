@@ -1,3 +1,8 @@
+if [[ -f ~/.nix-profile/etc/profile.d/nix.sh ]]; then
+    source ~/.nix-profile/etc/profile.d/nix.sh
+fi
+
+
 export EDITOR=nvim
 export TERM=xterm-256color
 export GPG_TTY=$(tty)
