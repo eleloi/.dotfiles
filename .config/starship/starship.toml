@@ -1,5 +1,4 @@
 format = """
-$username\
 $hostname\
 $direnv\
 $directory\
@@ -22,7 +21,7 @@ $character"""
 ssh_only = false
 ssh_symbol = '👽 '
 style = "yellow"
-format = "/[$ssh_symbol$hostname]($style)/ "
+format = "[$ssh_symbol$hostname]($style) "
 
 [directory]
 style = "blue"
