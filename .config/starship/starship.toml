@@ -1,17 +1,33 @@
 format = """
 $username\
 $hostname\
+$direnv\
 $directory\
 $git_branch\
+$git_commit\
 $git_state\
 $git_status\
 $cmd_duration\
-$line_break\
+$lua\
 $python\
+$rust\
+$go\
+$nodejs\
+$typst\
+$line_break\
 $character"""
+
+
+[hostname]
+ssh_only = false
+ssh_symbol = '👽 '
+style = "yellow"
+format = "/[$ssh_symbol$hostname]($style)/ "
 
 [directory]
 style = "blue"
+truncation_symbol = ".."
+truncate_to_repo = false
 
 [character]
 success_symbol = "[❯](purple)"
@@ -42,5 +58,16 @@ format = "[$duration]($style) "
 style = "yellow"
 
 [python]
-format = "[$virtualenv]($style) "
-style = "bright-black"
+format = ' [${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+
+[rust]
+format = ' [$symbol($version )]($style)'
+
+[lua]
+format = ' [$symbol($version )]($style)'
+
+[nodejs]
+format = ' [$symbol($version )]($style)'
+
+[typst]
+format = ' [$symbol($version )]($style)'
