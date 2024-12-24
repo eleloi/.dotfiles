@@ -36,4 +36,6 @@ if [[ -f $HOME/.tmuxifier/bin/tmuxifier ]]; then
 fi
 
 # mcli
-alias mc="mcli"
+if command -v mcli &> /dev/null; then
+    alias mc="mcli"
+fi
