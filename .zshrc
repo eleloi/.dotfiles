@@ -1,6 +1,15 @@
+# Nix
+# Single user case
 if [[ -f ~/.nix-profile/etc/profile.d/nix.sh ]]; then
+    echo "sourcing Nix profie"
     source ~/.nix-profile/etc/profile.d/nix.sh
 fi
+
+# Multi user case
+if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
+  . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+fi
+# End Nix
 
 
 export EDITOR=nvim
