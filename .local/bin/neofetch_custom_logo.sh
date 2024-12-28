@@ -18,7 +18,7 @@ case $ID in
         logo="arch2"
         ;;
     ubuntu)
-        logo="ubuntu_old2_small"
+        logo="ubuntu_small"
         ;;
 esac
 
