@@ -42,7 +42,7 @@ export HF_HUB_ENABLE_HF_TRANSFER=1
 
 # secrets
 if command -v pass &> /dev/null;then
-    eval $(pass show personal/ai-api-keys-file)
+    export eval $(pass show personal/ai-api-keys-file)
 fi
 
 # colorize man pages
