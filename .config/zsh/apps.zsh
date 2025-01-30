@@ -41,12 +41,8 @@ fi
 export HF_HUB_ENABLE_HF_TRANSFER=1
 
 # secrets
-if [[ -f $HOME/.config/secrets/openai_api_key ]]; then
-  export OPENAI_API_KEY="$(cat $HOME/.config/secrets/openai_api_key)"
-fi
-
-if [[ -f $HOME/.config/secrets/anthropic_api_key ]]; then
-  export ANTHROPIC_API_KEY="$(cat $HOME/.config/secrets/anthropic_api_key)"
+if command -v pass &> /dev/null;then
+    eval $(pass show personal/ai-api-keys-file)
 fi
 
 # colorize man pages
