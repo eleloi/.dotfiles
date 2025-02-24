@@ -26,3 +26,4 @@ $env.LS_COLORS = (vivid generate rose-pine)
 
 use aliases.nu *
 use carapace.nu 
+source '~/.config/nushell/lib/zoxide.nu'
