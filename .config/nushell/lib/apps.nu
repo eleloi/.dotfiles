@@ -1,6 +1,3 @@
-
-echo "Apps"
-
 # Zoxide
 source '~/.config/nushell/lib/zoxide.nu'
 
@@ -20,48 +17,37 @@ $env.XDG_DATA_DIRS = [
     "~/.local/share/flatpak/exports/share"
 ]
 
+# colorize man pages
+$env.GROFF_NO_SGR = 1
+
 # pnpm
 $env.PNPM_HOME = $"($env.HOME)/.local/share/pnpm"
 $env.PATH = ($env.PATH | split row (char esep) | prepend $env.PNPM_HOME )
 
+# direnv
+$env.config = {
+  hooks: {
+    pre_prompt: [{ ||
+      if (which direnv | is-empty) {
+        return
+      }
 
+      direnv export json | from json | default {} | load-env
+      if 'ENV_CONVERSIONS' in $env and 'PATH' in $env.ENV_CONVERSIONS {
+        $env.PATH = do $env.ENV_CONVERSIONS.PATH.from_string $env.PATH
+      }
+    }]
+  }
+}
 
-# export PNPM_HOME="/home/eleloi/.local/share/pnpm"
-# case ":$PATH:" in
-#   *":$PNPM_HOME:"*) ;;
-#   *) export PATH="$PNPM_HOME:$PATH" ;;
-# esac
-# 
-# # bob nvim binary
-# export PATH=/home/eleloi/.local/share/bob/nvim-bin:$PATH
-# 
-# # nvm
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-# 
-# # pyenv
-# if command -v pyenv &> /dev/null; then
-#     export PYENV_ROOT="$HOME/.pyenv"
-#     [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-#     eval "$(pyenv init -)"
-# fi
-# 
-# # huggingface
-# export HF_HUB_ENABLE_HF_TRANSFER=1
-# 
-# # secrets
-# if command -v pass &> /dev/null;then
-#     export eval $(pass show personal/ai-api-keys-file)
-# fi
-# 
-# # colorize man pages
-# export GROFF_NO_SGR=1
-# 
-# # mcli
-# complete -o nospace -C /usr/bin/mcli mcli
-# 
-# # direnv
-# if command -v direnv &> /dev/null; then
-#     eval "$(direnv hook zsh)"
-# fi
+# secrets
+if (which pass | is-not-empty) {
+    pass show personal/ai-api-keys-file 
+    | lines     
+    | split column '#'
+    | get column1
+    | filter {($in | str length) > 0}
+    | parse "{key}={value}"
+    | update value {str trim -c '"'}
+    | transpose -r -d | load-env
+}
