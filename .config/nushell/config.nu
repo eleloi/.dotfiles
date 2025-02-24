@@ -17,11 +17,12 @@
 # You can remove these comments if you want or leave
 # them for future reference.
 $env.EDITOR = 'nvim'
+$env.config.history.file_format = "sqlite"
+$env.config.edit_mode = "vi"
+$env.config.completions.algorithm = "fuzzy"
+$env.config.table.mode = "markdown"
+$env.config.table.index_mode = "auto"
+$env.LS_COLORS = (vivid generate rose-pine)
 
-source ~/.cache/carapace/init.nu
-source ~/.config/nushell/aliases.nu
-
-# mcli
-# if command -v mcli &> /dev/null; then
-#     alias mc="mcli"
-# fi
+use aliases.nu *
+use carapace.nu 
