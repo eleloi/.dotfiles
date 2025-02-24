@@ -10,7 +10,7 @@ def pet-register-prev [] {
 def gitf [] {
     git fetch --all --prune
 
-    if (which onefetch | is-not-emtpy) {
+    if (which onefetch | is-not-empty) {
         onefetch
     } else {
         echo "onefetch is not installed"
@@ -29,6 +29,35 @@ def gitf [] {
     #        echo "    ${CYAN}-----------------GIT STASH-------------------${NC}"
     #        echo "$stash_list"
     #    fi
+}
+
+def p --env [] {
+    let folders = [
+        "~/dev/mossos/microservices"
+        "~/dev/microservices"
+        "~/Dev/mossos/microservices"
+        "~/Dev/microservices"
+        "~/dev"
+        "~/Dev"
+        "~"
+    ]
+
+
+    for f in $folders {
+        if ( $f | path exists ) {
+            cd $f
+            break
+        }
+    }
+
+    ls ...(glob **/.git) --directory |
+        where name !~ 'dev_env' |
+        update name {|row| ($row.name | path dirname)} |
+        get name |
+        sk --preview {tree $in} |
+        cd $in
+
+    gitf
 }
 
 

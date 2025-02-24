@@ -29,7 +29,7 @@ $env.EDITOR = 'nvim'
 $env.config.history.file_format = "sqlite"
 $env.config.edit_mode = "vi"
 $env.config.completions.algorithm = "fuzzy"
-$env.config.table.mode = "markdown"
+$env.config.table.mode = "rounded"
 $env.config.table.index_mode = "auto"
 $env.LS_COLORS = (vivid generate rose-pine)
 
