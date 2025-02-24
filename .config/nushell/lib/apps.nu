@@ -20,10 +20,12 @@ $env.XDG_DATA_DIRS = [
     "~/.local/share/flatpak/exports/share"
 ]
 
+# pnpm
+$env.PNPM_HOME = $"($env.HOME)/.local/share/pnpm"
+$env.PATH = ($env.PATH | split row (char esep) | prepend $env.PNPM_HOME )
 
 
 
-# # pnpm
 # export PNPM_HOME="/home/eleloi/.local/share/pnpm"
 # case ":$PATH:" in
 #   *":$PNPM_HOME:"*) ;;
