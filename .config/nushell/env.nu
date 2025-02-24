@@ -16,7 +16,3 @@
 #
 # You can remove these comments if you want or leave
 # them for future reference.
-
-$env.NU_LIB_DIRS = [
-    ($nu.config-path | path dirname | path join 'lib')
-]

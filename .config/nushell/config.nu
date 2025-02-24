@@ -16,6 +16,13 @@
 #
 # You can remove these comments if you want or leave
 # them for future reference.
+
+const LIB_PATH = ($nu.config-path | path dirname | path join 'lib')
+source ($LIB_PATH | path join 'apps.nu')
+source ($LIB_PATH | path join 'aliases.nu')
+source ($LIB_PATH | path join 'carapace.nu')
+source ($LIB_PATH | path join 'zoxide.nu')
+
 $env.EDITOR = 'nvim'
 $env.config.history.file_format = "sqlite"
 $env.config.edit_mode = "vi"
@@ -24,6 +31,3 @@ $env.config.table.mode = "markdown"
 $env.config.table.index_mode = "auto"
 $env.LS_COLORS = (vivid generate rose-pine)
 
-use aliases.nu *
-use carapace.nu 
-source '~/.config/nushell/lib/zoxide.nu'
