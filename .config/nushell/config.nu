@@ -22,6 +22,8 @@ source ($LIB_PATH | path join 'apps.nu')
 source ($LIB_PATH | path join 'aliases.nu')
 source ($LIB_PATH | path join 'carapace.nu')
 source ($LIB_PATH | path join 'zoxide.nu')
+source ($LIB_PATH | path join 'plugins.nu')
+source ($LIB_PATH | path join 'functions.nu')
 
 $env.EDITOR = 'nvim'
 $env.config.history.file_format = "sqlite"
