@@ -25,12 +25,26 @@ source ($LIB_PATH | path join 'zoxide.nu')
 source ($LIB_PATH | path join 'plugins.nu')
 source ($LIB_PATH | path join 'functions.nu')
 source ($LIB_PATH | path join 'starship.nu')
+source ($LIB_PATH | path join 'nix.nu')
 
 $env.EDITOR = 'nvim'
+$env.TERM = 'xterm-256color'
+$env.GPG_TTY = (tty)
 $env.config.history.file_format = "sqlite"
 $env.config.edit_mode = "vi"
 $env.config.completions.algorithm = "fuzzy"
 $env.config.table.mode = "rounded"
 $env.config.table.index_mode = "auto"
+$env.config.show_banner = false
 $env.LS_COLORS = (vivid generate rose-pine)
+$env.LC_TIME = "es_ES.UTF-8"
+$env.LC_MONETARY = "es_ES.UTF-8"
+$env.LC_PAPER = "es_ES.UTF-8"
+$env.LC_MEASUREMENT = "es_ES.UTF-8"
+$env.LC_NAME = "es_ES.UTF-8"
+$env.LC_ADDRESS = "es_ES.UTF-8"
+$env.LC_TELEPHONE = "es_ES.UTF-8"
+$env.LC_IDENTIFICATION = "es_ES.UTF-8"
+
+~/.local/bin/neofetch_custom_logo.sh
 
