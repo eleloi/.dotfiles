@@ -59,17 +59,10 @@ def p --env [] {
     gitf
 }
 
-#
-## tmux new
-#tmn() {
-#    local session_name="$1"
-#    
-#    if [ -z "$session_name" ]; then
-#        echo -n "Session name? (default: default)  > " 
-#        read session_name
-#        session_name=${session_name:-default}
-#    fi
-#    
-#    tmux new -s "$session_name"
-#}
+def tmn [name = 'default'] {
+    if (which tmux | is-empty) {
+        return
+    }
 
+    tmux new -s ($name)
+}
