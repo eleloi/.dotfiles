@@ -55,3 +55,10 @@ complete -o nospace -C /usr/bin/mcli mcli
 if command -v direnv &> /dev/null; then
     eval "$(direnv hook zsh)"
 fi
+
+# carapace
+if command -v carapace &> /dev/null; then
+    export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
+    zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
+    source <(carapace _carapace)
+fi

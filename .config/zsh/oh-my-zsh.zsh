@@ -11,7 +11,7 @@ plugins=(
     docker
     pep8
     pip
-    zsh-autosuggestions
+    # zsh-autosuggestions
     zsh-fzf-history-search
     sudo
     zsh-syntax-highlighting
