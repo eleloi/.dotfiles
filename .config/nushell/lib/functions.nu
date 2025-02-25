@@ -31,6 +31,13 @@ def gitf [] {
 }
 
 def p --env [] {
+
+    if (which tre | is-empty) {
+        echo "Tre is not instaled"
+        return
+    }
+
+
     let folders = [
         "~/dev/mossos/microservices"
         "~/dev/microservices"
@@ -53,7 +60,7 @@ def p --env [] {
         where name !~ 'dev_env' |
         update name {|row| ($row.name | path dirname)} |
         get name |
-        sk --preview {tree $in} |
+        sk --preview {tre -l 3 -d -c always $in} |
         cd $in
 
     gitf
