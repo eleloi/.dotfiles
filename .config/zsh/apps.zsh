@@ -63,3 +63,8 @@ if command -v carapace &> /dev/null; then
     source <(carapace _carapace)
     export LS_COLORS=$(vivid generate catppuccin-frappe) 
 fi
+
+# atuin
+if command -v atuin &> /dev/null; then
+    eval "$(atuin init zsh)"
+fi
