@@ -11,7 +11,7 @@ plugins=(
     docker
     pep8
     pip
-    # zsh-autosuggestions
+    zsh-autosuggestions
     zsh-fzf-history-search
     sudo
     zsh-syntax-highlighting
@@ -29,7 +29,7 @@ source $ZSH/oh-my-zsh.sh
 export FZF_DEFAULT_COMMAND='fd --type f'
 export FZF_DEFAULT_OPTS="--layout=reverse --inline-info --height=80%"
 
-# enable-fzf-tab
+enable-fzf-tab
 
 # vi mode
 # source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
