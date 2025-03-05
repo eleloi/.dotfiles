@@ -43,6 +43,7 @@ export HF_HUB_ENABLE_HF_TRANSFER=1
 # secrets
 if command -v pass &> /dev/null;then
     export eval $(pass show personal/ai-api-keys-file)
+    pass show personal/atuin-key > /dev/shm/atuin-key
 fi
 
 # colorize man pages
@@ -67,5 +68,5 @@ fi
 
 # atuin
 if command -v atuin &> /dev/null; then
-    eval "$(atuin init zsh)"
+    [ -s "/dev/shm/atuin-key" ] && eval "$(atuin init zsh)"
 fi
