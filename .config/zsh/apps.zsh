@@ -70,3 +70,8 @@ fi
 if command -v atuin &> /dev/null; then
     [ -s "/dev/shm/atuin-key" ] && eval "$(atuin init zsh)"
 fi
+
+# todo.txt
+if command -v todo.sh &> /dev/null; then
+    alias todo='todo.sh -d ~/.config/todo/config'
+fi
