@@ -12,6 +12,7 @@ plugins=(
     pip
     sudo
     zsh-syntax-highlighting
+    zsh-autosuggestions
 )
 
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
