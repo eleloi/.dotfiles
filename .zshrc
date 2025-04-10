@@ -25,7 +25,9 @@ export LC_ADDRESS="es_ES.UTF-8"
 export LC_TELEPHONE="es_ES.UTF-8"
 export LC_IDENTIFICATION="es_ES.UTF-8"
 
-$HOME/.local/bin/neofetch_custom_logo.sh
+if command -v fastfetch &> /dev/null; then
+    fastfetch
+fi
 
 autoload -U +X bashcompinit && bashcompinit
 

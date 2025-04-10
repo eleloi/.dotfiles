@@ -6,9 +6,15 @@
     "margin-top": 10,
     "margin-left": 0,
     "spacing": 0,
-    "modules-left": ["idle_inhibitor", "cpu", "memory", "disk", "temperature"],
-    "modules-center": [],
-    "modules-right": ["tray", "pulseaudio", "network", "clock"],
+    "modules-left": ["idle_inhibitor", "cpu", "memory", "disk", "disk#home", "temperature"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["tray", "wireplumber", "network", "clock"],
+    "wireplumber": {
+        "format": "{volume}%",
+        "format-muted": "",
+        "on-click": "pavucontrol",
+        "rotate": 270,
+    },
     "custom/workspaces": {
         "exec": "niri-workspaces.sh \"$WAYBAR_OUTPUT_NAME\"",
         "signal": 8
@@ -75,19 +81,19 @@
         "rotate": 270,
     },
     "cpu": {
-        "format": "  {usage}%",
+        "format": " {usage}%",
         "tooltip": false,
         "rotate": 270,
     },
     "memory": {
-        "format": "  {}%",
+        "format": " {}%",
         "rotate": 270,
     },
     "temperature": {
         "thermal-zone": 1,
         "critical-threshold": 80,
         "format": "{icon} {temperatureC}°C",
-        "format-icons": ["", "", ""],
+        "format-icons": ["", "", ""],
         "rotate": 270
     },
     "backlight": {
@@ -111,7 +117,7 @@
     },
     "network": {
         "format-wifi": "{signalStrength}% ",
-        "format-ethernet": "",
+        "format-ethernet": "📡",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
@@ -149,6 +155,12 @@
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" 
     },
     "disk": {
+        "interval": 30,
+        "format": "<span></span> {percentage_used}%",
+        "rotate": 270
+    },
+    "disk#home": {
+        "path": "/home",
         "interval": 30,
         "format": "<span></span> {percentage_used}%",
         "rotate": 270
