@@ -1,8 +1,0 @@
-[Unit]
-Description=Syncthing
-
-[Service]
-ExecStart=/usr/bin/syncthing --config .config/syncthing --data .config/syncthing/data
-
-[Install]
-WantedBy=default.target

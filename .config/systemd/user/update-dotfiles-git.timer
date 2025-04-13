@@ -1,9 +1,0 @@
-[Unit]
-Description=Run on boot and each 30 minutes
-
-[Timer]
-OnBootSec=2m
-OnUnitActiveSec=30min
-
-[Install]
-WantedBy=timers.target
