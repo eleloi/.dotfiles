@@ -8,7 +8,7 @@ startup_command = "ls"
 
 [[session]]
 name = "⚙️ Dotfiles"
-path = "~/.dotfiles"
+path = "~/.config"
 startup_command = "dotls"
 
 [[session]]
