@@ -1,5 +1,5 @@
 [default_session]
-preview_command = "lsd --almost-all {}"
+preview_command = "lsd --icon always --color always {}"
 
 [[session]]
 name = "📥 Downloads"
