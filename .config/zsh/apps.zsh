@@ -55,7 +55,6 @@ complete -o nospace -C /usr/bin/mcli mcli
 # direnv
 if command -v direnv &> /dev/null; then
     eval "$(direnv hook zsh)"
-    source $HOME/.nix-profile/share/nix-direnv/direnvrc
 fi
 
 # carapace
