@@ -137,3 +137,10 @@ t() {
     sesh connect $session
   }
 }
+
+# scribes
+# You must build the images first, see developer environments project
+scriba() {
+    docker run --rm -v $(pwd):/app scriba-typ-tufte-memo "$@"
+}
+
