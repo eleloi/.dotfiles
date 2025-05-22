@@ -89,7 +89,7 @@ p() {
         fi
     done
 
-    local git_dirs=$(fd "^.git$" --type=f --hidden --exec dirname)
+    local git_dirs=$(fd "^.git$" --hidden --exec dirname)
 
     # Use fzf to let the user choose a directory from the list
     local selected_dir
