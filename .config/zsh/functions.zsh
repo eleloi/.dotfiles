@@ -89,19 +89,11 @@ p() {
         fi
     done
 
-    local git_dirs=()
-
-    # Use fd to search for directories and check if they contain a .git subdirectory
-    while IFS= read -r dir; do
-        if [ -d "$dir/.git" ]; then
-            # Add the directory to the array
-            git_dirs+=("$dir")
-        fi
-    done < <(fd -t d .)
+    local git_dirs=$(fd "^.git$" --type=f --hidden --exec dirname)
 
     # Use fzf to let the user choose a directory from the list
     local selected_dir
-    selected_dir=$(printf "%s\n" "${git_dirs[@]}" | fzf --prompt="Select a Git repository directory: " --preview="onefetch {} && tree -l 3 -c always {}")
+    selected_dir=$(printf "%s\n" "${git_dirs[@]}" | fzf --prompt="Select a Git repository directory: " --preview="lsd --tree --depth=2 --color=always {}")
 
     if [ -n "$selected_dir" ]; then
         cd "$selected_dir" || { echo "Failed to change directory to $selected_dir"; return 1; }
