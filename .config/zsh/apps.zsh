@@ -12,6 +12,9 @@ export PATH="$PATH:$HOME/.cargo/bin"
 # Go bins
 export PATH="$PATH:$HOME/go/bin:/usr/local/go/bin"
 
+# Mason bins
+export PATH="$PATH:$HOME/.local/share/nvim/mason/bin"
+
 # flatpak
 export "XDG_DATA_DIRS=/var/lib/flatpak/exports/share:/home/eleloi/.local/share/flatpak/exports/share:$XDG_DATA_DIRS"
 
@@ -73,4 +76,9 @@ fi
 # todo.txt
 if command -v todo.sh &> /dev/null; then
     alias todo='todo.sh -d ~/.config/todo/config'
+fi
+
+# tmuxifier
+if command -v tmuxifier &> /dev/null; then
+    eval "$(tmuxifier init -)"
 fi
