@@ -31,7 +31,7 @@
   Description = "yay: list instaled packages details with fzf"
   Filename = "/home/eleloi/.config/pet/snippet.toml"
   Output = ""
-  Tag = []
+  Tag = ["arch", "yay"]
   command = "yay -Qq | fzf --preview 'yay -Qil {}' --layout=reverse --bind 'enter:execute(yay -Qil {} | less)'"
 
 [[Snippets]]
@@ -80,12 +80,27 @@
   Description = "yay remove orphans"
   Filename = "/home/eleloi/.config/pet/snippet.toml"
   Output = ""
-  Tag = []
+  Tag = ["yay", "arch"]
   command = "yay -Qtdq | yay -Rns -"
 
 [[Snippets]]
   Description = "yay clean cache"
   Filename = "/home/eleloi/.config/pet/snippet.toml"
   Output = ""
-  Tag = []
+  Tag = ["yay", "arch"]
   command = "yay -Scc --noconfirm"
+
+[[Snippets]]
+  Description = "nix temp install"
+  Filename = "/home/eleloi/.config/pet/snippet.toml"
+  Output = ""
+  Tag = ["nix"]
+  command = "nix-shell -p <package>"
+
+
+[[Snippets]]
+  Description = "nu ps to sk pipes"
+  Filename = "/home/eleloi/.config/pet/snippet.toml"
+  Output = ""
+  Tag = ["nu"]
+  command = "ps --long | where user_id == (^id -u | into int) | sk --format {get name} --preview {}"
