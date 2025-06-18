@@ -1,0 +1,32 @@
+def container [] {
+    help container
+}
+
+def _color_row_by_state [col: string] {
+    update $col {|row| 
+        let value = ($row | get $col)
+        let state = ($row | get State)
+
+        match $state {
+            "running" => $"(ansi green)($value)(ansi reset)",
+            "exited" => $"(ansi red)($value)(ansi reset)",
+            _ => ($value)
+        } 
+    }
+}
+
+def "container list" [] {
+    mut containers = docker container ls --all --format json 
+      | from json --objects
+      | reject Labels
+      | select ID Names State Status RunningFor Image Mounts Networks Ports
+
+    for col in ($containers | columns) {
+        $containers = $containers | _color_row_by_state $col
+    }
+
+    $containers
+}
+
+
+
