@@ -1,0 +1,32 @@
+layout {
+    pane_template name="pane_layout" {
+        pane size=1 borderless=true {
+            plugin location="tab-bar"
+        }
+        children
+        pane size=1 borderless=true {
+            plugin location="status-bar"
+        }
+    }
+    tab name="tunnels" {
+        pane split_direction="vertical" {
+            pane command="cortsSocks5Proxy"
+            pane command="copitoollama"
+        }
+        pane split_direction="vertical" {
+            pane command="trancosTypesense"
+            pane command="cortsSquidProxy"
+        }
+        pane size=1 borderless=true {
+            plugin location="status-bar"
+        }
+    }
+}
+keybinds {
+    shared {
+        bind "Ctrl q" {
+            Quit
+        }
+    }
+}
+
