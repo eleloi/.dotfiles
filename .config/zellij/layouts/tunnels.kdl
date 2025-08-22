@@ -14,7 +14,7 @@ layout {
             pane command="copitoollama"
         }
         pane split_direction="vertical" {
-            pane command="trancosTypesense"
+            pane command="k8sProd"
             pane command="cortsSquidProxy"
         }
         pane size=1 borderless=true {
