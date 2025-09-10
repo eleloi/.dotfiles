@@ -1,0 +1,13 @@
+sessions:
+  - name: "sys"
+    directory: "~"
+    windows:
+      - name: "nix"
+        panes:
+          - command: "cd ~/nixos-config"
+      - name: "dotfiles"
+        panes:
+          - command: "cd ~/nixos-config/dotfiles"
+      - name: "nvim"
+        panes:
+          - command: "cd ~/.config/nvim"

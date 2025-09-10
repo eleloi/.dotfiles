@@ -1,0 +1,18 @@
+sessions:
+  - name: "My Awesome Project"
+    directory: "~/projects/my-awesome-project"
+    windows:
+      - name: "Code"
+        layout: "vertical"
+        panes:
+          - command: "nvim"
+          - command: "git status"
+      - name: "Server"
+        panes:
+          - command: "npm run dev"
+  - name: "Another Project"
+    directory: "~/projects/another-project"
+    windows:
+      - name: "Editor"
+        panes:
+          - command: "vim"
