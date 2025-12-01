@@ -11,7 +11,6 @@ layout {
     tab name="tunnels" {
         pane split_direction="vertical" {
             pane command="cortsSocks5Proxy"
-            pane command="copitoollama"
         }
         pane split_direction="vertical" {
             pane command="k8sProd"
