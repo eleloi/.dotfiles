@@ -10,7 +10,7 @@ layout {
     }
     tab name="tunnels" {
         pane split_direction="vertical" {
-            pane command="cortsSocks5Proxy"
+            pane command="copitoOllama"
             pane command="k8sProd"
         }
         pane size=1 borderless=true {
