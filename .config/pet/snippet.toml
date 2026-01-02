@@ -1,106 +1,102 @@
 
 [[Snippets]]
-  Description = "gpg: View gpg key descriptions"
-  Filename = "/home/eleloi/.config/pet/snippet.toml"
-  Output = ""
-  Tag = []
-  command = "pass gpg/key-descriptions|bat --color=always --language=markdown"
+Description = "gpg: View gpg key descriptions"
+Output = ""
+Tag = []
+command = "pass gpg/key-descriptions|bat --color=always --language=markdown"
 
 [[Snippets]]
-  Description = "gpg: list secret keys"
-  Filename = "/home/eleloi/.config/pet/snippet.toml"
-  Output = ""
-  Tag = []
-  command = "gpg --list-secret-keys --keyid-format LONG"
+Description = "gpg: list secret keys"
+Output = ""
+Tag = []
+command = "gpg --list-secret-keys --keyid-format LONG"
 
 [[Snippets]]
-  Description = "gpg: make secret keys backup into pass manager"
-  Filename = "/home/eleloi/.config/pet/snippet.toml"
-  Output = ""
-  Tag = []
-  command = "gpg --export-secret-keys --armor | gpg --symmetric --armor --passphrase \"<password>\" --batch|pass insert --multiline  gpg/secret-keys-backup "
+Description = "gpg: make secret keys backup into pass manager"
+Output = ""
+Tag = []
+command = "gpg --export-secret-keys --armor | gpg --symmetric --armor --passphrase \"<password>\" --batch|pass insert --multiline  gpg/secret-keys-backup "
 
 [[Snippets]]
-  Description = "jq example filter certain key value items, case insensitive"
-  Filename = "/home/eleloi/.config/pet/snippet.toml"
-  Output = ""
-  Tag = []
-  command = "pass show bitwarden-backup.json | jq '.items|..| if(.name? and (.name | ascii_downcase | contains(\"santander\"))) then . else empty end'"
+Description = "jq example filter certain key value items, case insensitive"
+Output = ""
+Tag = []
+command = "pass show bitwarden-backup.json | jq '.items|..| if(.name? and (.name | ascii_downcase | contains(\"santander\"))) then . else empty end'"
 
 [[Snippets]]
-  Description = "yay: list instaled packages details with fzf"
-  Filename = "/home/eleloi/.config/pet/snippet.toml"
-  Output = ""
-  Tag = ["arch", "yay"]
-  command = "yay -Qq | fzf --preview 'yay -Qil {}' --layout=reverse --bind 'enter:execute(yay -Qil {} | less)'"
+Description = "yay: list instaled packages details with fzf"
+Output = ""
+Tag = ["arch", "yay"]
+command = "yay -Qq | fzf --preview 'yay -Qil {}' --layout=reverse --bind 'enter:execute(yay -Qil {} | less)'"
 
 [[Snippets]]
-  Description = "bash register .env file variables into shell"
-  Filename = "/home/eleloi/.config/pet/snippet.toml"
-  Output = ""
-  Tag = []
-  command = "export $(grep -v '^#' .env | xargs -d '\\n')"
+Description = "bash register .env file variables into shell"
+Output = ""
+Tag = []
+command = "export $(grep -v '^#' .env | xargs -d '\\n')"
 
 [[Snippets]]
-  Description = "Generate password as passphrase"
-  Filename = "/home/eleloi/.config/pet/snippet.toml"
-  Output = ""
-  Tag = []
-  command = "xkcdpass -n 3 -d - -C capitalize"
+Description = "Generate password as passphrase"
+Output = ""
+Tag = []
+command = "xkcdpass -n 3 -d - -C capitalize"
 
 [[Snippets]]
-  Description = "Docker remove all test stuff"
-  Filename = "/home/eleloi/.config/pet/snippet.toml"
-  Output = ""
-  Tag = []
-  command = "docker ps --filter 'name=.test' --format {{.Names}}|xargs -t -I % sh -c 'docker stop % && docker rm %'"
+Description = "Docker remove all test stuff"
+Output = ""
+Tag = []
+command = "docker ps --filter 'name=.test' --format {{.Names}}|xargs -t -I % sh -c 'docker stop % && docker rm %'"
 
 [[Snippets]]
-  Description = "yay: find package containing specific filename"
-  Filename = "/home/eleloi/.config/pet/snippet.toml"
-  Output = ""
-  Tag = []
-  command = "yay -F <filename>"
+Description = "yay: find package containing specific filename"
+Output = ""
+Tag = []
+command = "yay -F <filename>"
 
 [[Snippets]]
-  Description = "Which process is using which port"
-  Filename = "/home/eleloi/.config/pet/snippet.toml"
-  Output = ""
-  Tag = []
-  command = "sudo ss -lptn|grep <port>"
+Description = "Which process is using which port"
+Output = ""
+Tag = []
+command = "sudo ss -lptn|grep <port>"
 
 [[Snippets]]
-  Description = "corts socks5 proxy"
-  Filename = "/home/eleloi/.config/pet/snippet.toml"
-  Output = ""
-  Tag = []
-  command = "ssh -C -q -D 8088 -t corts.cgicapps.com 'watch -n 30 cowsay proxy'"
+Description = "corts socks5 proxy"
+Output = ""
+Tag = []
+command = "ssh -C -q -D 8088 -t corts.cgicapps.com 'watch -n 30 cowsay proxy'"
 
 [[Snippets]]
-  Description = "yay remove orphans"
-  Filename = "/home/eleloi/.config/pet/snippet.toml"
-  Output = ""
-  Tag = ["yay", "arch"]
-  command = "yay -Qtdq | yay -Rns -"
+Description = "yay remove orphans"
+Output = ""
+Tag = ["yay", "arch"]
+command = "yay -Qtdq | yay -Rns -"
 
 [[Snippets]]
-  Description = "yay clean cache"
-  Filename = "/home/eleloi/.config/pet/snippet.toml"
-  Output = ""
-  Tag = ["yay", "arch"]
-  command = "yay -Scc --noconfirm"
+Description = "yay clean cache"
+Output = ""
+Tag = ["yay", "arch"]
+command = "yay -Scc --noconfirm"
 
 [[Snippets]]
-  Description = "nix temp install"
-  Filename = "/home/eleloi/.config/pet/snippet.toml"
-  Output = ""
-  Tag = ["nix"]
-  command = "nix-shell -p <package>"
-
+Description = "nix temp install"
+Output = ""
+Tag = ["nix"]
+command = "nix-shell -p <package>"
 
 [[Snippets]]
-  Description = "nu ps to sk pipes"
-  Filename = "/home/eleloi/.config/pet/snippet.toml"
-  Output = ""
-  Tag = ["nu"]
-  command = "ps --long | where user_id == (^id -u | into int) | sk --format {get name} --preview {}"
+Description = "nu ps to sk pipes"
+Output = ""
+Tag = ["nu"]
+command = "ps --long | where user_id == (^id -u | into int) | sk --format {get name} --preview {}"
+
+[[Snippets]]
+Description = "git remove origin tag"
+Output = ""
+Tag = []
+command = "git push origin :refs/tags/<tag=1.0.0>"
+
+[[Snippets]]
+Description = "generate kustomization.yaml"
+Output = ""
+Tag = []
+command = "nu --commands \"{ resources: (ls | get name) } | to yaml | save kustomization.yaml\""
