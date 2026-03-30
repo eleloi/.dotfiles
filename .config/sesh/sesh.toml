@@ -3,16 +3,33 @@ sort_order = [
 ]
 
 [default_session]
-preview_command = "lsd --icon always --color always {}"
+preview_command = "tre -l 2 -d {}"
+startup_command = "jj st"
+
+[[session]]
+name = "nix"
+path = "~/nixos-config/"
 
 [[session]]
 name = "tango"
 path = "~/dev/k8s/dev-envs/tango"
-preview_command = "tre -l 2 -d {}"
-startup_command = "jj st"
 
 [[session]]
 name = "auth"
 path = "~/dev/k8s/dev-envs/auth"
-preview_command = "tre -l 2 -d {}"
-startup_command = "jj st"
+
+[[session]]
+name = "analyst"
+path = "~/dev/k8s/dev-envs/analyst"
+
+[[session]]
+name = "nipfoto"
+path = "~/dev/k8s/dev-envs/nipfoto"
+
+[[session]]
+name = "cgicapps"
+path = "~/dev/k8s/cgicapps"
+
+[[session]]
+name = "infra"
+path = "~/dev/k8s/infra"
