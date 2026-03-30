@@ -1,24 +1,18 @@
+sort_order = [
+    "config", # resulting order: config, tmux, tmuxinator, zoxide
+]
+
 [default_session]
 preview_command = "lsd --icon always --color always {}"
 
 [[session]]
-name = "📥 Downloads"
-path = "~/Downloads"
-startup_command = "ls"
+name = "tango"
+path = "~/dev/k8s/dev-envs/tango"
+preview_command = "tre -l 2 -d {}"
+startup_command = "jj st"
 
 [[session]]
-name = "⚙️ Dotfiles"
-path = "~/.config"
-startup_command = "dotls"
-
-[[session]]
-name = "⚙️ Nix config"
-path = "~/nixos-config"
-startup_command = "nvim flake.nix"
-preview_command = "tree ~/nixos-config"
-
-[[session]]
-name = "💻 Develop environments"
-path = "~/dev/microservices/developer-environments"
-preview_command = "onefetch {}"
-startup_command = "docker ps && just --list"
+name = "auth"
+path = "~/dev/k8s/dev-envs/auth"
+preview_command = "tre -l 2 -d {}"
+startup_command = "jj st"
