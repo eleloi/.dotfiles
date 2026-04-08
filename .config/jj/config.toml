@@ -9,6 +9,9 @@ behavior = "own"
 backend = "gpg"
 key = "A8A8882C5990AEB6"
 
+[revsets]
+log = "ancestors(@, 10) | main | working_copies() | bookmarks()"
+
 [ui]
 default-command = "log"
 pager = "delta"
