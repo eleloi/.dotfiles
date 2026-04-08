@@ -33,3 +33,7 @@ path = "~/dev/k8s/cgicapps"
 [[session]]
 name = "infra"
 path = "~/dev/k8s/infra"
+
+[[session]]
+name = "nvim"
+path = "~/.config/nvim"
