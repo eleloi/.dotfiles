@@ -9,8 +9,17 @@ behavior = "own"
 backend = "gpg"
 key = "A8A8882C5990AEB6"
 
-[revsets]
-log = "ancestors(@, 10) | main | working_copies() | bookmarks()"
+[aliases]
+l = [
+    "log",
+    "-r",
+    "ancestors(@, 10) | ancestors(working_copies(), 5) | bookmarks()",
+]
+ltags = [
+    "log",
+    "-r",
+    "ancestors(@, 5) | ancestors(working_copies(), 5) | bookmarks() | ancestors(tags(), 5)",
+]
 
 [ui]
 default-command = "log"
