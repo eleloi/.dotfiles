@@ -1,7 +1,22 @@
 [[plugin.deps]]
 use = "ndtoan96/ouch"
-rev = "0742fff"
-hash = "2bd799b42b8e42b8ef100310be71f8d1"
+rev = "406ce6c"
+hash = "f5afc904d5106ee368c8aa2ded43bd74"
+
+[[plugin.deps]]
+use = "josephschmitt/auto-layout"
+rev = "c8a3d8d"
+hash = "94e76cea86ef32b9b73c56d3e3f5120d"
+
+[[plugin.deps]]
+use = "Reledia/glow"
+rev = "bd3eaa5"
+hash = "92b5c58159a51c567f82b618cee2b78"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:chmod"
+rev = "babfd0f"
+hash = "f0c8c378184d5f8abd1b095a443d336d"
 
 [flavor]
 deps = []
