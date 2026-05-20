@@ -4,7 +4,6 @@ sort_order = [
 
 [default_session]
 preview_command = "tre -l 2 -d {}"
-startup_command = "jj st"
 
 [[session]]
 name = "nix"

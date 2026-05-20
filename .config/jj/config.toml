@@ -20,6 +20,11 @@ ltags = [
     "-r",
     "ancestors(@, 5) | ancestors(working_copies(), 5) | bookmarks() | ancestors(tags(), 5)",
 ]
+la = [
+    "log",
+    "-r",
+    "ancestors(@, 3) | ancestors(working_copies(), 3) | bookmarks() | ancestors(ancestors(tags(), 3), 3)",
+]
 
 [ui]
 default-command = "log"
