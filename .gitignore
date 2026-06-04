@@ -1,2 +1,3 @@
 .dotfiles
 .config/nushell/history.txt
+.config/jj/repos
