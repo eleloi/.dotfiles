@@ -1,3 +1,5 @@
 .dotfiles
 .config/nushell/history.txt
 .config/jj/repos
+.config/pi/agent/vstack/
+.config/pi/agent/sessions/

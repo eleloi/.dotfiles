@@ -37,6 +37,13 @@ config.text_background_opacity = 0.9
 config.front_end = "OpenGL"
 config.enable_wayland = true
 
+-- Enable Kitty keyboard protocol for reliable Ctrl+Enter / Shift+Enter detection
+-- in tmux (csi-u format). Without this, wezterm may not pass modified Enter
+-- keys through tmux consistently. See:
+-- https://sw.kovidgoyal.net/kitty/keyboard-protocol/
+-- https://github.com/earendil-works/pi-mono/blob/main/docs/terminal-setup.md#wezterm
+config.enable_kitty_keyboard = true
+
 -- Exact Rose Pine palette with a darker background
 config.colors = {
   foreground = "#e0def4",
