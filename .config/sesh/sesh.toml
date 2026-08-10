@@ -11,27 +11,35 @@ path = "~/nixos-config/"
 
 [[session]]
 name = "tango"
-path = "~/dev/k8s/dev-envs/tango"
+path = "~/dev/k8s/src/tango"
 
 [[session]]
 name = "auth"
-path = "~/dev/k8s/dev-envs/auth"
+path = "~/dev/k8s/src/auth"
 
 [[session]]
 name = "analyst"
-path = "~/dev/k8s/dev-envs/analyst"
+path = "~/dev/k8s/src/analyst"
 
 [[session]]
 name = "nipfoto"
-path = "~/dev/k8s/dev-envs/nipfoto"
+path = "~/dev/k8s/src/nipfoto"
 
 [[session]]
 name = "cgicapps"
-path = "~/dev/k8s/cgicapps"
+path = "~/dev/k8s/src/namespaces/cgicapps"
 
 [[session]]
 name = "infra"
-path = "~/dev/k8s/infra"
+path = "~/dev/k8s/src/namespaces/infra"
+
+[[session]]
+name = "testing"
+path = "~/dev/k8s/src/namespaces/testing"
+
+[[session]]
+name = "formacio"
+path = "~/dev/k8s/src/namespaces/formacio"
 
 [[session]]
 name = "nvim"
