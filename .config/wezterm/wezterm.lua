@@ -44,21 +44,22 @@ config.enable_wayland = true
 -- https://github.com/earendil-works/pi-mono/blob/main/docs/terminal-setup.md#wezterm
 config.enable_kitty_keyboard = true
 
--- Exact Rose Pine palette with a darker background
+-- Exact Solarized Osaka palette, vivid variant (from
+-- craftzdog/solarized-osaka.nvim, vivid_brightness = 0.3)
 config.colors = {
-  foreground = "#e0def4",
-  background = "#111019",
-  cursor_bg = "#e0def4",
-  cursor_fg = "#111019",
-  selection_bg = "#26233a",
-  selection_fg = "#e0def4",
+  foreground = "#a0b4b6",
+  background = "#001419",
+  cursor_bg = "#a0b4b6",
+  cursor_fg = "#001419",
+  selection_bg = "#063540",
+  selection_fg = "#c2cdcd",
   ansi = {
-    "#191724", "#eb6f92", "#31748f", "#f6c177",
-    "#9ccfd8", "#c4a7e7", "#ebbcba", "#e0def4"
+    "#001419", "#ff6c6a", "#a2bb00", "#dba500",
+    "#5aaefa", "#fe67a8", "#34c5b9", "#b6c5c6"
   },
   brights = {
-    "#6e6a86", "#eb6f92", "#31748f", "#f6c177",
-    "#9ccfd8", "#c4a7e7", "#ebbcba", "#524f67"
+    "#002c38", "#ff6c6a", "#a2bb00", "#dba500",
+    "#5aaefa", "#fe67a8", "#34c5b9", "#c2cdcd"
   },
 }
 
